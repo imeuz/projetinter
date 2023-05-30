@@ -1,0 +1,71 @@
+Algoritmo "controledeestoque"
+
+Var
+    nproduto: vetor [1..3] de caractere
+    pproduto: vetor [1..3] de real
+    qproduto: vetor [1..3] de inteiro
+    cproduto: vetor [1..3] de inteiro
+    i, op, numprod, qtdp: inteiro
+
+Inicio
+    repita
+        escreval("DIGITE O NÚMERO CORRESPONDENTE À OPERAÇÃO DESEJADA")
+        escreval()
+        escreval("============")
+        escreval("[1] - Cadastrar produtos")
+        escreval("[2] - Registrar entrada/saída de produtos")
+        escreval("[3] - Verificar saldo de produto")
+        escreval("[4] - Encerrar")
+        escreval("============")
+        escreval()
+        leia(op)
+        escolha op
+            caso 1
+                para i de 1 ate 3 faca
+                   escreval("Digite o nome do(s) produto(s) que você deseja registrar: ")
+                   leia(nproduto[i])
+                   escreval("Digite o preço do(s) produto(s) que você está cadastrando: ")
+                   leia(pproduto[i])
+                   escreval("Digite a quantidade do(s) produto(s) que você está cadastrando: ")
+                   leia(qproduto[i])
+                   escreval("Digite o código do(s) produto(s) que você está cadastrando: ")
+                   leia(cproduto[i])
+                   escreval()
+                fimpara
+            caso 2
+              escreval("Digite o número correspondente ao produto registrado")
+              para i de 1 ate 3 faca
+                escreval("Produto", i, ": ", nproduto[i])
+              fimpara
+              leia(numprod)
+              escolha (numprod)
+                caso 1
+                    escreval()
+                    escreval("Digite a quantidade do produto ", nproduto[1], ": ")
+                    leia(qtdp)
+                    escreval()
+                caso 2
+                    escreval()
+                    escreval("Digite a quantidade do produto ", nproduto[2], ": ")
+                    leia(qtdp)
+                    escreval()
+                caso 3
+                    escreval()
+                    escreval("Digite a quantidade do produto ", nproduto[3], ": ")
+                    leia(qtdp)
+                    escreval()
+              fimescolha
+            caso 3
+                escreval("Digite o número correspondente ao produto registrado")
+                para i de 1 ate 3 faca
+                    escreval("Produto", i, ": ", nproduto[i])
+                fimpara
+                leia(numprod)
+                escreval("O saldo do produto é de", qtdp, " unidades")
+                escreval()
+            caso 4
+                escreval("Programa encerrado.")
+        fimescolha
+    ate (op=4)
+
+Fimalgoritmo
